@@ -275,14 +275,16 @@ fieldset[disabled] .btn-primary.active {
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 6px 0 6px 6px;
 }
-.carousel {
-	border: 2px black;
-	height: 80%;
-	width: 45%;
+
+.carousal {
+      width: 50%;
+      align-items: center;
 }
 
 .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
-      width: 180%;
       margin: auto;
+      width: 90%;
+      height: 40%;
+      max-height: 40%;
   }
