@@ -17,9 +17,11 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^index/$', views.index),
+    url(r'^index/', views.index),
     url(r'^login/$', views.login),
     url(r'^logout/$', views.logout),
+    url(r'^register/$', views.register_page),
+    url(r'^register/success/$', views.register_success),
     url(r'^exploreCatalogue/$', views.ExploreCatalogue),
     url(r'^ArchDev/$', views.ArchDev),
     url(r'^AdaptiveReuse/$', views.AdaptiveReuse),

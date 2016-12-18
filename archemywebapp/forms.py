@@ -3,15 +3,11 @@ from django.contrib.auth.models import User
 from django.forms import ModelForm
 from archemywebapp.models import ArchemywebappUser
 
-class RegistrationForm(ModelForm):
+class RegistrationForm(forms.Form):
         username        = forms.CharField(label=(u'User Name'))
         email           = forms.EmailField(label=(u'Email Address'))
         password        = forms.CharField(label=(u'Password'), widget=forms.PasswordInput(render_value=False))
         password1       = forms.CharField(label=(u'Verify Password'), widget=forms.PasswordInput(render_value=False))
-
-        class Meta:
-                model = ArchemywebappUser
-                exclude = ('user',)
 
         def clean_username(self):
                 username = self.cleaned_data['username']

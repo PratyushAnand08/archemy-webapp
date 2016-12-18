@@ -21,6 +21,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 LOGIN_URL='/login/'
 
+CSRF_COOKIE_SECURE = True
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'ra69u!ann891%sfu=&9w3z69==n0rqw!x0dm=dc-z4s@mzm)&d'
 
@@ -38,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'archemywebapp',

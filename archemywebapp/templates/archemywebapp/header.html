@@ -27,7 +27,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/index/">
-                	<img src="{% static 'images/Archemy_TM.png' %}" width="150px">
+                	<img src="{% static 'images/Archemy_TM.png' %}" width="90px" max-width="100%" height="auto">
                 </a>
             </div>
             <!-- Navbar links -->
@@ -115,7 +115,11 @@
 							    <li><a tabindex="-1" href="/logout/">Logout</a></li>
 						    </ul>
                         {% else %}
-                            <a href="/login/?next={{ request.path }}"><span class="glyphicon glyphicon-user"></span> Login</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="glyphicon glyphicon-user"></span> User <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+							    <li><a href="/login/?next={{ request.path }}">Login</a></li>
+                                <li><a href="/register/">Register</a></li>
+						    </ul>
                         {% endif %}    
                     </li>
                 </ul>
