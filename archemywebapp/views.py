@@ -61,43 +61,38 @@ def register_success(request):
 def ExploreCatalogue(request):
 	return render(request, 'archemywebapp/ExploreCatalogue.html')
 
+@login_required
 def ArchDev(request):
 	return render(request, 'archemywebapp/ArchDev.html', {})
 
+@login_required
 def AdaptiveReuse(request):
 	return render(request, 'archemywebapp/AdaptiveReuse.html', {})
 
+@login_required
 def AEL(request):
 	return render(request, 'archemywebapp/Ael.html', {})
 
+@login_required
 def AelIdeation(request):
 	return render(request, 'archemywebapp/AelIdeation.html', {})
 
+@login_required
 def AelInception(request):
 	return render(request, 'archemywebapp/AelInception.html', {})
 
+@login_required
 def AelElaboration(request):
 	return render(request, 'archemywebapp/AelElaboration.html', {})
 
+@login_required
 def AelImplementation(request):
 	return render(request, 'archemywebapp/AelImplementation.html', {})
 
+@login_required
 def AelDeployment(request):
 	return render(request, 'archemywebapp/AelDeployment.html', {})
 
+@login_required
 def AelOperations(request):
 	return render(request, 'archemywebapp/AelOperations.html', {})
-
-def jarWrapper(*args):
-    process = Popen(['java', '-jar']+list(args), stdout=PIPE, stderr=PIPE)
-    ret = []
-    while process.poll() is None:
-        line = process.stdout.readline()
-        if line != '' and line.endswith('\n'):
-            ret.append(line[:-1])
-    stdout, stderr = process.communicate()
-    ret += stdout.split('\n')
-    if stderr != '':
-        ret += stderr.split('\n')
-    ret.remove('')
-    return ret
