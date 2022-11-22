@@ -7,7 +7,7 @@ moviepy==0.2.2.11
 music21==3.1.0
 MySQL-python==1.2.5
 numpy==1.11.2
-Pillow==6.2.0
+Pillow==9.3.0
 six==1.10.0
 tqdm==4.10.0
 unroll==0.1.0
